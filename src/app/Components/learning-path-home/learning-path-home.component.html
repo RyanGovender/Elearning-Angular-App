@@ -1,0 +1,44 @@
+<div class="row">
+ 
+    <div class="card bg-dark text-white">
+      <img class="card-img" src="https://vueschool.io/img/svg/vueschool_hero.svg" width="100%" alt="">
+      <div class="card-img-overlay">
+        <div class="container-fluid mt-5" style="margin-top: 8%!important;">
+          <div class="row">
+            <div class="col-md-4">
+               <div class="card text-dark bg-default">
+                   <img class="card-img-top" 
+                   src={{SelectedLearningPath.pathIcon}}
+                    alt="">
+                   <div class="card-body">
+                     <h4 class="card-title">{{SelectedLearningPath.name}}</h4>
+                     <p class="card-text">{{SelectedLearningPath.learningPathDescription}}</p>
+                   </div>
+                 </div>
+            </div>
+           <div class="col-md-4"></div>
+            <div class="col-md-4">
+              <div class="card x" >
+                <div class="card-img-overlay">
+                  <div class="card no">
+                      <!-- <img class="card-img-top" src="https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/visual-aids-for-learning.png" alt=""> -->
+                      <div class="card-body">
+                          <h4 class="card-title">{{SelectedLearningPath.name}} Statistics (Example Data) </h4>
+                          <p class="card-text">15 Courses!</p>
+                          <p class="card-text">789 Hours of video</p>
+                          <p class="card-text">4 Projects</p>
+                          <p class="card-text">6655 Students</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<h1 class="text-center mt-5">All Courses for {{SelectedLearningPath.name}}</h1>
+
+<app-all-courses></app-all-courses>

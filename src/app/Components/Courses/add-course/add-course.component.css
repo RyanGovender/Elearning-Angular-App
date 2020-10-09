@@ -1,0 +1,12 @@
+img{
+    max-height: 200px!important;
+    border-radius: 100%;
+}
+
+button{
+   min-width: 100%!important;
+}
+
+.mat-form-field{
+    min-width: 100%!important;
+}

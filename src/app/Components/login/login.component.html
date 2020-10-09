@@ -1,0 +1,23 @@
+
+<p style="margin-top: 50%;">login works!</p>
+<form class="example-form" [formGroup]="form">
+    <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="email" type="email">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="password" type="password">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <button mat-button color="warn" (click)="Login()">Login</button>
+</form>
+  
+  

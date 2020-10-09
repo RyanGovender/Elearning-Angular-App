@@ -1,0 +1,13 @@
+.card{
+    border : 0px!important;
+}
+
+.col-md-4 .card{
+    border-radius: 15px;
+    
+}
+
+.col-md-4 img{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}

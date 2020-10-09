@@ -1,0 +1,55 @@
+<app-heroimage></app-heroimage>
+<div class="container">
+  <div>
+    <h1 class="text-center pt-2 mb-3">All Learning Paths</h1>
+  </div>
+ 
+<div class="row">
+    <!-- <div class="col-md-3">
+        <mat-card class="example-card mb-2" >
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Learning Path</mat-card-title>
+              <mat-card-subtitle>Add New</mat-card-subtitle>
+            </mat-card-header>
+            <!-- <img mat-card-image src="" alt="Photo of a Shiba Inu"> 
+            <mat-card-content>
+               <p>
+               Add A New Learning Path.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-fab (click)="openDialog()">
+                   <!-- <fa-icon icon="plus"></fa-icon> 
+                   <fa-icon icon="plus"></fa-icon>
+                  </button>
+            </mat-card-actions>
+          </mat-card>
+    </div> -->
+    
+    <div class="col-lg-3" *ngFor="let paths of AlllearningPaths">
+<mat-card class="example-card mb-2" >
+    <img mat-card-image style="min-height: 150px;" src={{paths.pathIcon}} alt="Photo of a Shiba Inu">
+    <mat-card-content>
+       <strong>{{paths.name}}</strong>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button routerLink="/learningpath/{{paths.id}}/{{paths.name}}">VIEW</button>
+      <button mat-button (click)="UpdateDialog(paths)" >UPDATE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</div>
+    
+</div>
+   <a>
+    <div class="wrapper" id="fixedbutton">
+      <button class="btn-sonar" (click)="openDialog()">
+        <span class="down" style="font-size:large;"><fa-icon icon="plus"></fa-icon></span>
+      </button>
+    </div>
+
+  <!-- <button mat-fab (click)="openDialog()" id="fixedbutton">
+    <fa-icon icon="plus"></fa-icon>
+   </button> -->
+    </a>

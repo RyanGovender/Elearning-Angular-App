@@ -1,0 +1,74 @@
+
+<app-heroimage></app-heroimage>
+
+<div>
+  
+  <mat-tab-group [color]=color [backgroundColor]=backgroundColor mat-align-tabs="center">
+    <mat-tab label="All Users">
+
+        <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+          </mat-form-field>
+          
+          <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource" matSort>
+          
+             
+              <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+                <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+              </ng-container>
+          
+             
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+              </ng-container>
+          
+              
+              <ng-container matColumnDef="surname">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Surname </th>
+                <td mat-cell *matCellDef="let row"> {{row.surname}} </td>
+              </ng-container>
+          
+             
+              <ng-container matColumnDef="emailConfirmed">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Email Confrimed </th>
+                <td mat-cell *matCellDef="let row" > {{row.emailConfirmed}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="avatarUrl">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Avatar </th>
+                <td mat-cell *matCellDef="let row" > {{row.avatarUrl}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="createdDate">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Date Created </th>
+                <td mat-cell *matCellDef="let row" > {{row.createdDate}} </td>
+              </ng-container>
+
+          
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          
+              <!-- Row shown when there is no matching data. -->
+              <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+              </tr>
+            </table>
+          
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+          </div>
+
+         <!-- <p>get-users works!</p>
+        <div *ngFor="let users of AllUsers">
+            <p>{{users.name}}</p>
+        </div> -->
+    
+    </mat-tab>
+    <mat-tab label="Add User"> <app-add-user></app-add-user> </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab>
+  </mat-tab-group>
+  
+

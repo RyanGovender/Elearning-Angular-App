@@ -1,0 +1,58 @@
+      <form  class="example-form" [formGroup]="form" >
+        <div class="example-container">
+          <mat-form-field class="example-full-width " appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email"   formControlName="email" autocomplete="username">
+            <mat-icon matSuffix><fa-icon icon="pencil-alt"></fa-icon></mat-icon>
+            <mat-error >
+            Email is <strong>Required</strong>
+            </mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width " appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input  matInput formControlName="name">
+            <mat-error >
+              First Name is <strong>Required</strong>
+              </mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width " appearance="outline">
+            <mat-label>Surname</mat-label>
+            <input  matInput formControlName="surname">
+            <mat-error >
+                Surname is <strong>Required</strong>
+               </mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width " appearance="outline">
+            <mat-label>Password</mat-label>
+            <input  matInput type="password" formControlName="passwordHash" autocomplete="new-password" (keyup)="checkPassword()">
+            <mat-error >
+              Password is <strong>Required</strong>
+             </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width " appearance="outline">
+            <mat-label>Confirm Password</mat-label>
+            <input  matInput type="password" autocomplete="new-password" (keyup)="checkPasswords($event)">
+          </mat-form-field>
+          <p *ngIf="_flag" >
+            Passwords <strong>  Do Not Match </strong> 
+           </p>
+          <br>
+
+          <!-- PLease disable text box! -->
+          <mat-form-field class="example-full-width disabled" appearance="outline">
+            <mat-label>Image Url</mat-label>
+            <input  matInput aria-disabled="true"  value="" type="text" id="imageUrl"  formControlName="avatarUrl">
+          </mat-form-field>
+
+          <img src="" id="userImage" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+          
+          <app-cloud-upload></app-cloud-upload>
+         
+          <button mat-raised-button color="primary" (click)="Add();">Add User</button>
+        </div>
+      </form>
+   

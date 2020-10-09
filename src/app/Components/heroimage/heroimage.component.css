@@ -1,0 +1,9 @@
+.x{
+    min-height: 350px;
+    background-color: rgb(0 0 0 / 0.3);
+}
+.no{
+    background-color: transparent;
+     color: #fff;
+     border-color: transparent;
+}

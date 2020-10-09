@@ -1,0 +1,80 @@
+<h1 mat-dialog-title>Update Learning Path</h1>
+
+<div mat-dialog-content >
+    <form class="example-form" [formGroup]="form">
+      <h2 class="textCenter"> {{_learningPathService.LearingPath.name}}
+        <!-- <mat-hint class="center"><small>Number Courses : {{_learningPathService.LearingPath.totalCourses}}</small></mat-hint> -->
+      </h2>
+      
+    
+        <br>
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <mat-card class="example-card mb-2" >
+                <img mat-card-image *ngIf="src != ''" [src]=src alt="Incorrect Link">
+                <img *ngIf="src == '' "
+         mat-card-image 
+         src='/assets/defaultPicture.jpeg' 
+         alt="Incorrect Link">
+                <mat-card-content>
+                   <strong>{{name}}</strong>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>VIEW</button>
+                  <button mat-button>UPDATE</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+        </div>
+      <!-- <p>
+        <img *ngIf="src != ''" mat-card-image class="learningPathUrl center" [src]=src alt="Photo of a Shiba Inu">
+      </p>
+      <p >
+        <img *ngIf="src == '' "
+         mat-card-image class="learningPathUrl center" src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1024px-Angular_full_color_logo.svg.png' alt="Photo of a Shiba Inu">
+      </p> -->
+      <p>
+        <mat-form-field class="example-full-width " appearance="outline">
+            <mat-label>Learning Path Icon Url</mat-label>
+            <input matInput placeholder="Learning Path Icon Url" formControlName="url" (keyup)="UpdateImage($event) ">
+            <mat-icon matSuffix><fa-icon icon="link"></fa-icon></mat-icon>
+          </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width " appearance="outline">
+            <mat-label>Learning Path Name</mat-label>
+            <input matInput placeholder="Learning Path Name" required  formControlName="name" (keyup)="UpdateName($event)">
+            <mat-icon matSuffix><fa-icon icon="pencil-alt"></fa-icon></mat-icon>
+            <mat-error >
+             Learning Path Name is <strong>Required</strong>
+            </mat-error>
+          </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width " appearance="outline">
+            <mat-label>Short Description</mat-label>
+            <textarea  matInput formControlName="slug"></textarea>
+          </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field class="example-full-width " appearance="outline">
+            <mat-label>Learning Path Description</mat-label>
+            <textarea  matInput formControlName="longDescription" required></textarea>
+            <mat-error >
+                Learning Path Description is <strong>Required</strong>
+               </mat-error>
+          </mat-form-field>
+      </p>
+
+      <mat-hint><small>Created On : {{_learningPathService.LearingPath.createdDate}}</small></mat-hint>
+      <br>
+      <mat-hint *ngIf="_learningPathService.LearingPath.createdDate != _learningPathService.LearingPath.modifiedDate">
+        <small>Last Modified : {{_learningPathService.LearingPath.modifiedDate}}</small></mat-hint>
+
+
+</form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button color="warn" (click)="Update();">Update</button>
+  <button mat-button mat-dialog-close (click)="closeDialog(false)" >Close</button>
+</div>
