@@ -16,7 +16,7 @@ import {DemoMaterialModule} from './angular-material.module';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faPlus,faFilm,faPencilAlt,faLink } from '@fortawesome/free-solid-svg-icons';
+import { faPlus,faFilm,faPencilAlt,faLink,faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
@@ -111,8 +111,8 @@ export function tokenGetter()
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   constructor(library: FaIconLibrary){
-    library.addIcons(faPlus,faFilm,faPencilAlt,faLink);
+    library.addIcons(faPlus,faFilm,faPencilAlt,faLink,faUserGraduate);
   }
 }

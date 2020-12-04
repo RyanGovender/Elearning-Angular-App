@@ -8,8 +8,8 @@ import { EditorChangeContent, EditorChangeSelection } from 'ngx-quill';
 })
 export class AddCourseComponent implements OnInit {
 
-  blured = false
-  focused = false
+  blured = false;
+  focused = false;
 
 
   constructor() { }
@@ -29,16 +29,16 @@ export class AddCourseComponent implements OnInit {
 
   focus($event) {
     // tslint:disable-next-line:no-console
-    console.log('focus', $event)
-    this.focused = true
-    this.blured = false
+    console.log('focus', $event);
+    this.focused = true;
+    this.blured = false;
   }
 
   blur($event) {
     // tslint:disable-next-line:no-console
-    console.log('blur', $event)
-    this.focused = false
-    this.blured = true
+    console.log('blur', $event);
+    this.focused = false;
+    this.blured = true;
   }
 
 }

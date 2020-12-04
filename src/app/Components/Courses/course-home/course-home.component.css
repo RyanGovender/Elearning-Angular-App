@@ -1,13 +1,57 @@
-.card{
-    border : 0px!important;
+.hero-card{
+  max-width: 100%;
 }
 
-.col-md-4 .card{
-    border-radius: 15px;
-    
+#hero-card-image{
+  max-width: 100%;
+  max-height: 500px;
+  /* position: absolute; */
+  border-radius: 15px;
 }
 
-.col-md-4 img{
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+.course-status-card{
+  max-width: 100%;
+}
+
+#enroll-button{
+  min-width: 100%;
+}
+
+.about-instructor-card{
+max-width: 100%;
+}
+
+.avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+}
+
+fa-icon{
+ font-size: 70px;
+ color: black;
+}
+
+.col-md-3{
+  text-align: center!important;
+}
+
+.card-stats{
+  background: rgb(9,9,121);
+  background: white;
+  border-radius: 20px;
+}
+
+.card-stats:hover{
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+h6{
+  color: black;
 }
