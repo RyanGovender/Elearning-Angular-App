@@ -46,6 +46,7 @@ import {HomeComponent} from './Components/home/home.component';
 import { from } from 'rxjs';
 import { QuillModule } from 'ngx-quill';
 import {CourseHomeComponent} from './Components/Courses/course-home/course-home.component';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 export function tokenGetter()
 {
@@ -74,6 +75,7 @@ export function tokenGetter()
   ],
   imports: [
     BrowserAnimationsModule,
+    ColorPickerModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
