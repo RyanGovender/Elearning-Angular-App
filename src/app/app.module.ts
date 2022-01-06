@@ -1,3 +1,4 @@
+import { CourseHomeUsersLearningComponent } from './Components/Courses/course-home-components/course-home-users-learning/course-home-users-learning.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { HttpClientModule,HTTP_INTERCEPTORS  } from '@angular/common/http';
@@ -47,6 +48,7 @@ import { from } from 'rxjs';
 import { QuillModule } from 'ngx-quill';
 import {CourseHomeComponent} from './Components/Courses/course-home/course-home.component';
 import { ColorPickerModule } from 'ngx-color-picker';
+import { CourseHomeRequirementsComponent } from './Components/Courses/course-home-components/course-home-requirements/course-home-requirements.component';
 
 export function tokenGetter()
 {
@@ -71,7 +73,9 @@ export function tokenGetter()
     ScriptComponent,
     LoginComponent,
     HomeComponent,
-    CourseHomeComponent
+    CourseHomeComponent,
+    CourseHomeUsersLearningComponent,
+    CourseHomeRequirementsComponent
   ],
   imports: [
     BrowserAnimationsModule,
